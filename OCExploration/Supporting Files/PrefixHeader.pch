@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  OCExploration
+//
+//  Created by Constant Cody on 12/21/19.
+//  Copyright © 2019 Constant Cody. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+#define CCNSLog(format, ...) printf("%s\n", [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+#else
+#define CCNSLog(format, ...);
+#endif
+
+
+#endif /* PrefixHeader_pch */
