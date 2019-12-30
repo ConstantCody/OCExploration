@@ -25,6 +25,10 @@
 }
 
 - (void)testAlloc {
+    // libobjc.A.dylib
+    // 1: 下断点 : control + 【step into】 => objc_alloc
+    // 2: 下符号断点 : libobjc.A.dylib`+[NSObject alloc]:
+    // 3: 汇编  libobjc.A.dylib`objc_alloc:
     Job *job1 = [Job alloc];
     Job *job2 = [job1 init];
     Job *job3 = [job1 init];
